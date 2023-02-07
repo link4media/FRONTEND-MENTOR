@@ -1,11 +1,13 @@
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fraunces', serif;
     font-family: 'Montserrat', sans-serif;
-    transition: .5s;
+    transition: .3s;
 }
+/* VARIABLES */
 :root {
 /* PRIMARY */
     --Cream: hsl(30, 38%, 92%);
@@ -22,33 +24,34 @@ p {
     font-size: 1.05rem;
     line-height: 1.7rem;
     color: var(--Dark-grayish-blue);
-
 }
 .container {
     width: 100%;
+    max-width: 730px;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    display: grid;
     align-items: center;
 }
 .sub-container {
     background-color: var(--White);
     border-radius: 1rem;
-    width: 100%;
-    width: 730px;
-    height: 550px;
-    display: flex;
-    flex-wrap: wrap;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 550px;
 }
 .image {
     background-image: url(../images/image-product-desktop.jpg);
     background-position: center;
     background-size: cover;
-    width: 50%;
+    width: 100%;
+    height: auto;
     border-radius: 1rem 0 0 1rem;
 }
 .info-container {
-    width: 50%;
+    width: 100%;
+    height: auto;
     padding: 0.4rem 2.5rem;
     display: flex;
     flex-direction: column;
@@ -67,6 +70,7 @@ p {
     line-height: 2.5rem;
     color: var(--Very-dark-blue)
 }
+/* PRICE CONTAINER */
 .price {
     width: 100%;
     display: flex;
@@ -80,6 +84,7 @@ p {
 .price p:nth-child(2) {
     text-decoration:line-through;
 }
+/* BUTTON CONTAINER */
 .button {
     background-color: var(--Dark-cyan);
     border-radius: 0.6rem;
@@ -104,9 +109,48 @@ p {
     text-align: center;
 }
 
-
-/* @media (max-width: 680px) {
-    .sub-container {
-        flex-direction: column;
+/* MEDIA QUERIES */
+@media (max-width: 639px) {
+    .container {
+        width: 93%;
     }
-} */
+    .sub-container {
+    grid-template-rows: 2fr 3fr;
+    }
+    .image {
+        background-image: url(../images/image-product-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .info-container {
+        height: 378px;
+        padding: 1.1rem 1.5rem;
+    }
+    .info-container h3 {
+        font-size: 0.75rem;
+        letter-spacing: 0.35rem;
+    }
+    .info-container h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+    .price p:nth-child(1) {
+        font-size: 1.9rem;
+    }
+    .button {
+        padding: 0.8rem;
+    }
+    .button img {
+        width: 1rem;
+        height: 1rem;
+    }
+    .button p {
+        font-size: 0.9rem;
+    }
+}
