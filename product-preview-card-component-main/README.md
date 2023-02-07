@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repositories URL here](https://github.com/link4media/FRONTEND-MENTOR/tree/main/product-preview-card-component-main)
+- Solution URL: [Repositories URL here](https://github.com/link4media/FRONTEND-MENTOR/tree/layout/product-preview-card-component-main)
 - Live Site URL: [Live site URL here](https://link4media.github.io/FRONTEND-MENTOR/product-preview-card-component-main/index.html)
 
 ## My process
