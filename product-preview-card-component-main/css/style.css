@@ -19,6 +19,9 @@
 }
 body {
     background-color: var(--Cream);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
 }
 p {
     font-size: 1.05rem;
@@ -28,10 +31,6 @@ p {
 .container {
     width: 100%;
     max-width: 730px;
-    height: 100vh;
-    margin: 0 auto;
-    display: grid;
-    align-items: center;
 }
 .sub-container {
     background-color: var(--White);
@@ -111,9 +110,6 @@ p {
 
 /* MEDIA QUERIES */
 @media (max-width: 639px) {
-    .container {
-        width: 93%;
-    }
     .sub-container {
     grid-template-rows: 2fr 3fr;
     }
